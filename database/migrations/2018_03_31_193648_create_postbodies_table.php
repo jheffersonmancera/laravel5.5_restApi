@@ -15,8 +15,7 @@ class CreatePostbodiesTable extends Migration
     {
         Schema::create('postbodies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('key');
-            $table->text('value');
+            $table->text('json');
             $table->timestamps();
         });
     }
