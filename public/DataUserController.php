@@ -16,38 +16,10 @@ class DataUserController extends Controller
 //		Respuesta dinámica con base de datos:
 //      $datauser = DataUser::all();
 //      return  $datauser;
-    	//1
+
 //		filtrar respuesta
     	$datauser = DataUser::select('name','email')->get();
     	return  response()->json($datauser);
-
-    	//4
-    	/*$json = json_encode(array(
-		     "data" => array(
-		        "name" => "Jhefferson Mancera Silva",
-		        "email" => "jheffersonmancera@gmail.com",
-		     )
-		));
-    	return  response($json);*/
-
-		//5
-		$json = array(
-		     "data" => array(
-		        "name" => "Jhefferson Mancera Silva",
-		        "email" => "jheffersonmancera@gmail.com",
-		     )
-		);
-    	return  response()->json($json);
-
-
-    	//2
-   // 	$datauser = DataUser::all()->toArray();
-
-	//	return Response()->json(data('datauser'=>$name));
-    	//3
-    	//$name=DataUser::select('name')->get()->toArray();
-    	//$email=DataUser::select('email')->get()->toArray();
-    	//return Response()->json(array())
 
 
         //Respuesta estática sin base de datos:
